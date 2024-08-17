@@ -1,7 +1,7 @@
 import React,{useCallback} from 'react'
 import { useForm } from 'react-hook-form'
 import {Button,Input,Select,RTE} from '../index'
-import Service, { service } from '../../appWrite/config'
+import { service } from '../../appWrite/config'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -16,7 +16,7 @@ function PostForm({post}) {
         }
     });
     const navigate=useNavigate()
-    const usrData=useSelector(state=>state.user.userData)
+    const userData=useSelector(state=>state.auth.userData);
 
     const submit= async(data)=>{
         if(post){
@@ -84,7 +84,7 @@ function PostForm({post}) {
                     setValue("slug", slugTransForm(e.currentTarget.value), { shouldValidate: true });
                 }}
             />
-              <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
+              <RTE label="Content :" name="content" Control={control} defaultValue={getValues("content")} />
             </div>
             <div className="w-1/3 px-2">
                 <Input
@@ -109,8 +109,8 @@ function PostForm({post}) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
-                    {post ? "Update" : "Submit"}
+                 <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full"
+                    Children={post ? "Update" : "Submit"}>
                 </Button>
             </div>
         </form>

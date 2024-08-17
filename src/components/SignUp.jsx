@@ -5,7 +5,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import { login } from '../Store/AuthSlice'
 import {Button,Input,Logo} from "./index"
 import { useDispatch } from 'react-redux'
-import { Form, useForm } from 'react-hook-form'
+import {  useForm } from 'react-hook-form'
 
 
 
@@ -51,7 +51,7 @@ function SignUp() {
                 </p>
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-                <Form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
                     <Input
                         label="Full Name: "
@@ -79,11 +79,11 @@ function SignUp() {
                         {...register("password", {
                             required: true,})}
                         />
-                        <Button type="submit" className="w-full">
-                            Create Account
-                        </Button>
+                      
+                      <Button type="submit" Children={'Create Account'} clasName='w-full'  />
+                        
                     </div>
-                </Form>
+                </form>
 
             </div>
         </div>

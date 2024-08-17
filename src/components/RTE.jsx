@@ -11,26 +11,26 @@ function RTE({
 
             <Controller
             name={name||"content"}
-            control={Control}
+            control={Control||""}
             render={({field: {onChange}})=>(
                 <Editor
-        initialValue={defaultValue}
-        init={
-            {
-                initialValue:defaultValue,
-                branding:false,
-                height:500,
-                menubar:true,
-                plugins: [
+                apiKey='lxmym93h5h5w1buuabaf2kkpvcdh0o79s3gv1y1nz4dwa0f1'
+                 initialValue={defaultValue}
+                 init={ {
+                    initialValue:defaultValue,
+                    branding:false,
+                    height:500,
+                    menubar:true,
+                    plugins: [
                     'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                     'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
                     'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
-                ],
-                toolbar: 'undo redo | blocks | ' +
-                'bold italic forecolor | alignleft aligncenter ' +
-                'alignright alignjustify | bullist numlist outdent indent | ' +
-                'removeformat | help',
-                content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                    ],
+                    toolbar: 'undo redo | blocks | ' +
+                    'bold italic forecolor | alignleft aligncenter ' +
+                    'alignright alignjustify | bullist numlist outdent indent | ' +
+                    'removeformat | help',
+                    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
             }
         }
         onEditorChange={onChange}

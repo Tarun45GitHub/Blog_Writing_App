@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import store from './Store/store.js'
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import {AuthLayout} from './components/index.js'
 import {AddPost,AllPost,EditPost,Home,Login,Post,SignUp} from "./pages/index.js"
 
@@ -70,6 +70,6 @@ const router =createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <App />
+   <RouterProvider router={router}/>
   </Provider>,
 )

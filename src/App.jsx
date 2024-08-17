@@ -1,10 +1,11 @@
 import { useState,useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import authService from './appWrite/auth'
+import authService from './appWrite/auth.js'
 import { login,logout } from './Store/AuthSlice'
 import conf from './conf/conf'
 import {Header,Footer} from "./components/index"
 import './App.css'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [loading,setLoading]=useState(true)
@@ -26,7 +27,7 @@ function App() {
       <div className='w-full block'>
         <Header/>
         <main>
-          wdfghj
+         <Outlet/>
         </main>
         <Footer/>
       </div>
