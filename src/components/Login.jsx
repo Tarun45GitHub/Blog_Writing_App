@@ -47,7 +47,7 @@ function Login() {
                         to="/signup"
                         className="font-medium text-primary transition-all duration-200 hover:underline"
                     >
-                        Sign In
+                        Sign Up
                     </Link>
             </p>
             {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
@@ -76,7 +76,7 @@ function Login() {
                 })}
                 />
                         <Button
-                        Children={'sign up'}
+                        Children={'Sign In'}
                         ></Button>
                     </div>
 
