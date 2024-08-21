@@ -1,5 +1,5 @@
 import React from 'react'
-import { service } from "../appWrite/config"
+import { service } from "../appwrite/config"
 import { Link } from 'react-router-dom'
 
 function PostCard({

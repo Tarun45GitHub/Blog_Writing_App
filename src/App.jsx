@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { AuthService } from './appWrite/auth'
+import { authService } from './appwrite/auth'
 import { login,logout } from './Store/AuthSlice'
 import conf from './conf/conf'
 import {Header,Footer} from "./components/index"
@@ -12,7 +12,7 @@ function App() {
   const dispatch=useDispatch()
 
   useEffect(()=>{
-    AuthService.getCurrentUser()
+    authService.getCurrentUser()
   .then((userData)=>{
     if(userData) dispatch(login({userData}));
     else dispatch(logout());
