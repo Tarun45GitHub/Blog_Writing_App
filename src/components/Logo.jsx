@@ -1,8 +1,10 @@
 import React from 'react'
+import logo from '../assets/logo.png'
 
-function Logo({width='100px'}) {
+
+function Logo({width='w-10 h-10'}) {
     return (
-        <div>Logo</div>
+        <img src={logo} alt="" className={`${width}`} />
     )
 }
 
